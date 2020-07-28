@@ -46,9 +46,6 @@ header, section, footer {
     font-family: 'Quicksand', sans-serif;
     
 }
-body {
-    max-width: 100%;
-}
 /*header style starts here*/
 header {
     background-image: url("https://images.unsplash.com/photo-1568941159284-3b299541ee63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
@@ -132,6 +129,9 @@ button{
     font-size: 15px;
     margin-top: 5%;
 }
+.number {
+    padding-top:6%;
+}
 /*footer starts here*/
 footer{
     display: flex;
@@ -153,4 +153,20 @@ footer{
 }
 .headquarter address {
     line-height: 60px;;
+}
+/*responsive design starts here*/
+@media(max-width:500px){
+    .logo{
+        width: 20%;
+        margin-left: 4%;
+    }
+    .links nav {
+        padding-top: 45%;
+    }
+    .salesSup div h3{
+        font-size: 1rem;
+    }
+    .googleMap{
+        width: 250px;
+    }
 }

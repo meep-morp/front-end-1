@@ -19,6 +19,9 @@
 @mixin navBar {
   text-decoration: none;
   color: $primaryTextColor;
+  padding: 3% 2% 3% 2%;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 @mixin primaryButton {
@@ -35,23 +38,28 @@
 #homepage-header {
   @include backgroundImage();
   .logo-nav-container {
-    @include flexCenter(column, center);
-  }
-  .logo {
-    @include flexCenter(row, center);
-    i {
-      padding: 1%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    .logo {
+      @include flexCenter(row, center);
+      margin: 0 0 0 3%;
+      width: 10%;
+      i {
+        padding: 3%;
+      }
+    }
+    .nav-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 90%;
+      margin: 0 3% 0 0;
+      a {
+        @include navBar();
+      }
     }
   }
-  .nav-container {
-    @include flexCenter(column, center);
-  }
-  nav {
-    @include flexCenter(row, center);
-  }
-  nav a {
-    @include navBar();
-  }
+
   .slogan-container {
     @include flexCenter(column, center);
     margin: 10% 0 10% 0;

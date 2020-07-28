@@ -8,58 +8,16 @@
 }
 
 #homepage-header .logo-nav-container {
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#homepage-header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#homepage-header .logo i {
-  padding: 1%;
-}
-
-#homepage-header .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#homepage-header nav {
+#homepage-header .logo-nav-container .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,11 +31,31 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 0 3%;
+  width: 10%;
 }
 
-#homepage-header nav a {
+#homepage-header .logo-nav-container .logo i {
+  padding: 3%;
+}
+
+#homepage-header .logo-nav-container .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  margin: 0 3% 0 0;
+}
+
+#homepage-header .logo-nav-container .nav-container a {
   text-decoration: none;
   color: white;
+  padding: 3% 2% 3% 2%;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 #homepage-header .slogan-container {

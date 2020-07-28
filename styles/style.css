@@ -262,4 +262,12 @@ h3 {
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
 }
+
+#homepage-call-to-action .cta-text {
+  color: white;
+  text-align: center;
+  background-color: black;
+  padding: 5% 0 5% 0;
+  font-size: 1.5rem;
+}
 /*# sourceMappingURL=style.css.map */

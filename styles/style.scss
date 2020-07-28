@@ -8,12 +8,14 @@
 
 //font-family: 'Quicksand', sans-serif;
 
+@import "./variables";
+@import "./header";
+
 html {
-    font-size: 12px;
-    
+  font-size: 12px;
 }
 
-
-
-
-
+header {
+  display: flex;
+  justify-content: center;
+}

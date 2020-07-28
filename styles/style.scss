@@ -1,13 +1,72 @@
 @import "./variables";
 @import "./header";
 
+//Mixins
+@mixin aboutImage {
+  length: 300px;
+  width: 300px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+@mixin aboutImageAndText {
+  margin: 0 5% 0 5%;
+  border-radius: 10%;
+  border-bottom: $borderColor;
+  border-right: $borderColor;
+  border-left: $borderColor;
+}
+
+//General
+
 html {
   font-family: "Quicksand", sans-serif;
   color: $primaryTextColor;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 600;
 }
 
 //Homepage About
+
+#homepage-about {
+  @include flexCenter(row, center);
+  color: $secondaryTextColor;
+  background-color: white;
+  padding: 5%;
+  .about-container {
+    @include flexCenter(column, center);
+    .about-text {
+      @include flexCenter(column, center);
+      margin: 0 0 5% 0;
+      line-height: .5rem;
+      h3 {
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+    }
+    .about-images {
+      @include flexCenter(row, center);
+      .about-location {
+        @include flexCenter(column, center);
+        @include aboutImageAndText();
+      }
+      .about-time {
+        @include flexCenter(column, center);
+        @include aboutImageAndText();
+      }
+      .about-features {
+        @include flexCenter(column, center);
+        @include aboutImageAndText();
+      }
+      img {
+        @include aboutImage();
+      }
+    }
+  }
+}

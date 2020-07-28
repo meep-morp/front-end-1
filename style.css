@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    /* border:0.5px solid black; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header, section, footer {
+    font-family: 'Quicksand', sans-serif;
+    
+}
+body {
+    max-width: 100%;
+}
+/*header style starts here*/
+header {
+    background-image: url("https://images.unsplash.com/photo-1568941159284-3b299541ee63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
+    background-position:center;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+}
+.logo {
+    width: 10%;
+    margin-top: 5%;
+}
+header div img{
+    width: 100%;
+    height: 35px;
+    margin-top: 75%;
+}
+.links {
+    width: 100%;
+}
+.links nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20%;
+    padding-bottom: 5%;
+}
+.links nav a {
+    color: #F5F5DC;
+    text-decoration: none;
+}
+/*section starts here*/
+.ourTeam{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.text1{
+    width: 50%;
+    text-align: center;
+    line-height: 20px;
+}
+h1 {
+    margin-bottom: 1%;
+    margin-top: 2%;
+    font-size: 2rem;
+}
+.salesSup{
+    display: flex;
+    flex-flow: row;
+    justify-content: center; 
+    padding-top: 2%;   
+    padding-bottom: 2%;
+}
+.salesSup div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+    width: 35%;
+    height: 10rem;
+    border-style: solid;
+    border:1px solid black;
+    border-radius: 10px;
+}
+.salesSup div h3{
+    font-size: 1.9rem;
+}
+.sales{
+    padding-top: 5%;
+    text-align: center;
+}
+button{
+    width: 50%;
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    margin-top: 5%;
+}
+/*footer starts here*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid gray;
+    padding-top: 2%;
+}
+.headquarter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.headquarter h3{
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.headquarter address {
+    line-height: 60px;;
+}

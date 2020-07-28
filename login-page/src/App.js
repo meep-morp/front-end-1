@@ -1,79 +1,131 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import * as yup from 'yup';
+import formSchema from './FormSchema';
 import './App.css';
 
 const initialFormValues = {
-  username: '',
-  email: '',
-  password: '',
+  "username": '',
+  "password": '',
+  "primaryemail": '',
 }
 
+const initialFormErrors = {
+  "username": '',
+  "password": '',
+  "primaryemail": '',
+}
+const initialDisabled = true;
 
-function App(props) {
+function App() {
 
-  const { values, update, submit } = props
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormErrors] = useState(initialFormErrors);
+  const [disabled, setDisabled] = useState(initialDisabled);
+  console.log(formValues)
 
-  const [username, setUsername] = useState(''); 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const changeHandler = (name, value) => {
+    yup 
+      .reach(formSchema, name)
+      .validate(value)
+      .then((valid) => {
+        console.log(valid)
+        setFormErrors({
+          ...formErrors,
+          [name]: '',
+        });
+      })
+      .catch((e) => {
+        setFormErrors({
+          ...formErrors, 
+          [name]: e.errors[0],
+        });
+      });
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const onChange = evt => {
+    setFormValues({...formValues, [evt.target.name]: evt.target.value})
+    const { name, value } = evt.target
+    changeHandler(name,value)
+  }
 
   const onSubmit = evt => {
     evt.preventDefault()
-    submit()
+    const newUser = {
+      username: formValues.username.trim(),
+      password: formValues.password.trim(),
+      primaryemail: formValues.primaryemail.trim(),
+    }
+   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/createnewuser', newUser)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      debugger;
+    })
   }
 
-  const onChange = evt => {
-    const { name, value } = evt.target
-    update(name,value)
-  }
+  useEffect(() => {
+    formSchema.isValid(formValues)
+      .then((valid) => {
+        setDisabled(!valid)
+      })
+  }, [formValues])
 
-  function validateForm() {
-    return username.length > 0 && email.length > 0 && password.length > 0;
-  }
 
   return (
     <div className='Login'>
      <form onSubmit={onSubmit}>
       <div className='login-inputs'>
-        <label htmlFor='usernameInput'>Username:
+        <label htmlFor='username'>Username:
           <input
-            id='usernameInput'
+            id='username'
             name='username'
             type='text'
             placeholder='Enter username'
             maxLength='20'
-            value={values.username}
+            value={formValues.username}
             onChange={onChange}
           />
         </label>
 
-        <label htmlFor='emailInput'>Email:
+        <label htmlFor='password'>Password:
           <input
-            id='emailInput'
-            name='email'
-            type='text'
-            placeholder='Enter email'
-            maxLength='20'
-            value={values.email}
-            onChange={onChange}
-          />
-        </label>
-
-        <label htmlFor='passwordInput'>Password:
-          <input
-            id='passwordInput'
+            id='password'
             name='password'
-            type='text'
+            type='password'
             placeholder='Enter password'
             maxLength='20'
-            value={values.password}
+            value={formValues.password}
+            onChange={onChange}
+          />
+        </label>
+
+        <label htmlFor='primaryemail'>Primary Email:
+          <input
+            id='primaryemail'
+            name='primaryemail'
+            type='text'
+            placeholder='Enter email'
+            maxLength='30'
+            value={formValues.primaryemail}
             onChange={onChange}
           />
         </label>
       </div>
       <div className='form-group submit'>
-        <button disabled={!values.username || !values.email || !values.password}>Login</button>
+        <button disabled={disabled} type='submit'>Submit</button>
       </div> 
      </form>
+     <div>
+       {formErrors.username}
+       {formErrors.password}
+       {formErrors.primaryemail}
+     </div>
     </div>
   );
 }

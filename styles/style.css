@@ -72,11 +72,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10% 0 10% 0;
+  margin: 15% 0 10% 0;
 }
 
 #homepage-header .slogan-container .slogan {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #homepage-header .slogan-container .header-button {
@@ -166,7 +166,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 0 5% 0;
-  line-height: .5rem;
+  line-height: 0.5rem;
 }
 
 #homepage-about .about-container .about-text h3 {
@@ -191,6 +191,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 600;
 }
 
 #homepage-about .about-container .about-images .about-location {
@@ -264,10 +265,63 @@ h3 {
 }
 
 #homepage-call-to-action .cta-text {
-  color: white;
-  text-align: center;
   background-color: black;
   padding: 5% 0 5% 0;
+  margin: 0 0 5% 0;
+  text-align: center;
+  color: white;
   font-size: 1.5rem;
+}
+
+#homepage-call-to-action .cta-text button {
+  background-color: #e8505b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+}
+
+#footer {
+  background-color: #14b1ab;
+}
+
+#footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#footer .footer-container .footer-container-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 30%;
+}
+
+#footer .footer-container .footer-container-right .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .footer-container .footer-container-right .social-icons i {
+  margin: 20%;
 }
 /*# sourceMappingURL=style.css.map */

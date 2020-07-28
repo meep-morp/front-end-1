@@ -62,9 +62,9 @@
 
   .slogan-container {
     @include flexCenter(column, center);
-    margin: 10% 0 10% 0;
+    margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
     .header-button {
       @include flexCenter(row, center);

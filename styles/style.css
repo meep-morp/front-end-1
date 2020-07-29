@@ -116,6 +116,10 @@
   color: white;
 }
 
+#homepage-header .slogan-container .header-button a button:hover {
+  font-size: 1.1rem;
+}
+
 #safety-header {
   height: 80vh;
   background-image: url("https://images.unsplash.com/photo-1584634731339-252c581abfc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1054&q=80");
@@ -646,6 +650,10 @@ h3 {
   border: none;
   font-size: 1rem;
   padding: 1%;
+}
+
+#homepage-call-to-action .cta-text button:hover {
+  font-size: 1.1rem;
 }
 
 #footer {

@@ -90,6 +90,9 @@ h3 {
     button {
       @include primaryButton();
     }
+    button:hover {
+      font-size: 1.1rem;;
+    }
   }
 }
 

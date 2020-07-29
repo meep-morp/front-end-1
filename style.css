@@ -42,7 +42,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-header, section, footer {
+header, body, footer {
     font-family: 'Quicksand', sans-serif;
     
 }
@@ -58,8 +58,7 @@ header {
 }
 header img{
     width: 10%;
-    height: 35px;
-    margin-top: 10%;
+    height: 49px;
 }
 .links {
     width: 100%;
@@ -67,12 +66,15 @@ header img{
 .links nav {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 20%;
-    padding-bottom: 5%;
+    padding-left: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: black;
 }
 .links nav a {
     color: #F5F5DC;
     text-decoration: none;
+    font-size: 15px;  
 }
 /*section starts here*/
 .ourTeam{
@@ -154,17 +156,31 @@ footer{
 /*contactPage responsive design starts here*/
 @media(max-width:500px){
     header img {
-        width: 15%;
-        margin-top: 36%;
+        width: 17%;
+        height: 26px;
     }
     .links nav {
-        padding-top: 45%;
+       display: flex;
+       justify-content: space-evenly;
+    }
+    .links nav a {
+        font-size: 10px;
     }
     .salesSup div h3{
         font-size: 1rem;
     }
-    .googleMap{
-        width: 250px;
+    .headquarter {
+        width: 40%;
+        height: 330px;
+    }
+    .headquarter address {
+        text-align: center;
+        line-height: 50px;
+    }
+    footer div iframe {
+        width: 100%;
+        height: 330px;
+
     }
 }
 /*marketPage CSS starts here*/
@@ -206,6 +222,15 @@ section div span {
     line-height: 35px;
     text-align: right;
 }
+section div iframe {
+    width:40%;
+    height: 200px;
+}
+.graph{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 /*footer starts here*/
 .marFooter {
     background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/6c9a9a99-9c38-417e-a7f5-a45ede9b3407-1532627926.jpg");
@@ -231,8 +256,22 @@ footer nav a{
 }
 /*marketPage responsive design starts here*/
 @media(max-width:500px){
+    header img {
+        width: 17%;
+        height: 26px;
+    }
+    .links nav {
+       display: flex;
+       justify-content: space-evenly;
+    }
+    .links nav a {
+        font-size: 10px;
+    }
     .parag {
         line-height: 18px;
         font-size: 14px;
+    }
+    footer img{
+        width: 15%;
     }
 }

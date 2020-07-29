@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import * as yup from 'yup';
 import formSchema from './FormSchemaLogin';
-// import { }
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+
 import './App.css';
 
 const initialFormValues = {
@@ -77,36 +78,39 @@ export default function Login() {
 
   return (
     <div className='Login'>
-      <div className='login-inputs'>
-        <label htmlFor='username'>Username:
-          <input
-            id='username'
-            name='username'
-            type='text'
-            placeholder='Enter username'
-            maxLength='20'
-            value={formValues.username}
-            onChange={onChange}
-          />
-        </label>
-
-        <label htmlFor='password'>Password:
-          <input
-            id='password'
-            name='password'
-            type='password'
-            placeholder='Enter password'
-            maxLength='20'
-            value={formValues.password}
-            onChange={onChange}
-          />
-        </label>
-
-      </div>
-      <div className='form-group submit'>
-        <button disabled={disabled} onClick={onSubmit}>Login</button>
-      </div> 
-     
+        <Form>
+            <div className='login-inputs'>
+            <FormGroup>
+                <Label htmlFor='username'>Username:
+                <Input
+                    id='username'
+                    name='username'
+                    type='text'
+                    placeholder='Enter username'
+                    maxLength='20'
+                    value={formValues.username}
+                    onChange={onChange}
+                />
+                </Label>
+             </FormGroup>
+             <FormGroup>
+                <Label htmlFor='password'>Password:
+                <Input
+                    id='password'
+                    name='password'
+                    type='password'
+                    placeholder='Enter password'
+                    maxLength='20'
+                    value={formValues.password}
+                    onChange={onChange}
+                />
+                </Label>
+            </FormGroup>
+            </div>
+            <div className='form-group submit'>
+                <Button disabled={disabled} onClick={onSubmit}>Login</Button>
+            </div> 
+        </Form>
      <div>
        {formErrors.username}
        {formErrors.password}

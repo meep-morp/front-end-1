@@ -53,9 +53,13 @@
 #homepage-header .logo-nav-container .nav-container a {
   text-decoration: none;
   color: white;
-  padding: 3% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   font-weight: 600;
   font-size: 1rem;
+}
+
+#homepage-header .logo-nav-container .nav-container a:hover {
+  font-size: 1.1rem;
 }
 
 #homepage-header .slogan-container {
@@ -167,9 +171,13 @@
 #safety-header .logo-nav-container .nav-container a {
   text-decoration: none;
   color: white;
-  padding: 3% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   font-weight: 600;
   font-size: 1rem;
+}
+
+#safety-header .logo-nav-container .nav-container a:hover {
+  font-size: 1.1rem;
 }
 
 #safety-header .slogan-container {
@@ -282,9 +290,13 @@
 #about-header .logo-nav-container .nav-container a {
   text-decoration: none;
   color: white;
-  padding: 3% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   font-weight: 600;
   font-size: 1rem;
+}
+
+#about-header .logo-nav-container .nav-container a:hover {
+  font-size: 1.1rem;
 }
 
 #about-header .slogan-container {
@@ -396,9 +408,13 @@
 #get-started-header .logo-nav-container .nav-container a {
   text-decoration: none;
   color: white;
-  padding: 3% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   font-weight: 600;
   font-size: 1rem;
+}
+
+#get-started-header .logo-nav-container .nav-container a:hover {
+  font-size: 1.1rem;
 }
 
 #get-started-header .slogan-container {

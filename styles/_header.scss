@@ -19,7 +19,7 @@
 @mixin navBar {
   text-decoration: none;
   color: $primaryTextColor;
-  padding: 3% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -60,6 +60,9 @@
       margin: 0 3% 0 0;
       a {
         @include navBar();
+      }
+      a:hover {
+        font-size: 1.1rem;
       }
     }
   }
@@ -109,6 +112,9 @@
       margin: 0 3% 0 0;
       a {
         @include navBar();
+      }
+      a:hover {
+        font-size: 1.1rem;
       }
     }
   }
@@ -161,6 +167,9 @@
       a {
         @include navBar();
       }
+      a:hover {
+        font-size: 1.1rem;
+      }
     }
   }
   .slogan-container {
@@ -209,6 +218,9 @@
       margin: 0 3% 0 0;
       a {
         @include navBar();
+      }
+      a:hover {
+        font-size: 1.1rem;
       }
     }
   }

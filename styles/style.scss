@@ -91,7 +91,9 @@ h3 {
       @include primaryButton();
     }
     button:hover {
-      font-size: 1.1rem;;
+      background-color: white;
+      color: $secondaryTextColor;
+      font-weight: 600;
     }
   }
 }

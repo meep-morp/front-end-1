@@ -112,6 +112,349 @@
   color: white;
 }
 
+#safety-header {
+  height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1584634731339-252c581abfc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1054&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#safety-header .logo-nav-container {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#safety-header .logo-nav-container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 3%;
+  width: 10%;
+}
+
+#safety-header .logo-nav-container .logo i {
+  padding: 3%;
+}
+
+#safety-header .logo-nav-container .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  margin: 0 3% 0 0;
+}
+
+#safety-header .logo-nav-container .nav-container a {
+  text-decoration: none;
+  color: white;
+  padding: 3% 2% 3% 2%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#safety-header .slogan-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15% 0 10% 0;
+}
+
+#safety-header .slogan-container .slogan {
+  font-size: 1.5rem;
+  color: #383838;
+}
+
+#safety-header .slogan-container .header-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#safety-header .slogan-container .header-button a {
+  background-color: #e8505b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+}
+
+#safety-header .slogan-container .header-button a button {
+  border: none;
+  font-size: 1rem;
+  background-color: #e8505b;
+  color: white;
+}
+
+#about-header {
+  height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#about-header .logo-nav-container {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#about-header .logo-nav-container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 3%;
+  width: 10%;
+}
+
+#about-header .logo-nav-container .logo i {
+  padding: 3%;
+}
+
+#about-header .logo-nav-container .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  margin: 0 3% 0 0;
+}
+
+#about-header .logo-nav-container .nav-container a {
+  text-decoration: none;
+  color: white;
+  padding: 3% 2% 3% 2%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#about-header .slogan-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15% 0 10% 0;
+}
+
+#about-header .slogan-container .slogan {
+  font-size: 1.5rem;
+}
+
+#about-header .slogan-container .header-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#about-header .slogan-container .header-button a {
+  background-color: #e8505b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+}
+
+#about-header .slogan-container .header-button a button {
+  border: none;
+  font-size: 1rem;
+  background-color: #e8505b;
+  color: white;
+}
+
+#get-started-header {
+  height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#get-started-header .logo-nav-container {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#get-started-header .logo-nav-container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 3%;
+  width: 10%;
+}
+
+#get-started-header .logo-nav-container .logo i {
+  padding: 3%;
+}
+
+#get-started-header .logo-nav-container .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  margin: 0 3% 0 0;
+}
+
+#get-started-header .logo-nav-container .nav-container a {
+  text-decoration: none;
+  color: white;
+  padding: 3% 2% 3% 2%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#get-started-header .slogan-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15% 0 10% 0;
+}
+
+#get-started-header .slogan-container .slogan {
+  font-size: 1.5rem;
+}
+
+#get-started-header .slogan-container .header-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#get-started-header .slogan-container .header-button a {
+  background-color: #e8505b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+}
+
+#get-started-header .slogan-container .header-button a button {
+  border: none;
+  font-size: 1rem;
+  background-color: #e8505b;
+  color: white;
+}
+
 html {
   font-family: "Quicksand", sans-serif;
   color: white;
@@ -332,5 +675,36 @@ h3 {
 #footer .footer-container .footer-container-right .social-icons a {
   color: white;
   margin: 20%;
+}
+
+.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.person img {
+  length: 250px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+.person h4 {
+  text-align: center;
+  margin: 0 0 10% 0;
+}
+
+.person .bio-container {
+  padding: 0 0 0 5%;
 }
 /*# sourceMappingURL=style.css.map */

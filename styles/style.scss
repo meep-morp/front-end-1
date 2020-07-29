@@ -18,6 +18,12 @@
   border-left: $borderColor;
 }
 
+@mixin aboutUsImage {
+  length: 250px;
+  width: 250px;
+  border-radius: 50px;
+}
+
 //General
 
 html {
@@ -108,5 +114,21 @@ h3 {
         }
       }
     }
+  }
+}
+
+//About Us
+
+.person {
+  @include flexCenter(row, flex-start);
+  img {
+    @include aboutUsImage;
+  }
+  h4 {
+    text-align: center;
+    margin: 0 0 10% 0;
+  }
+  .bio-container {
+    padding: 0 0 0 5%;
   }
 }

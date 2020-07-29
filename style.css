@@ -46,24 +46,20 @@ header, section, footer {
     font-family: 'Quicksand', sans-serif;
     
 }
-/*header style starts here*/
+/*contactPage CSS starts here*/
+/*header starts here*/
 header {
     background-image: url("https://images.unsplash.com/photo-1568941159284-3b299541ee63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80");
     background-position:center;
-    background-repeat: repeat;
     background-size: cover;
     display: flex;
     flex-direction: row;
     height: 250px;
 }
-.logo {
+header img{
     width: 10%;
-    margin-top: 5%;
-}
-header div img{
-    width: 100%;
     height: 35px;
-    margin-top: 75%;
+    margin-top: 10%;
 }
 .links {
     width: 100%;
@@ -131,6 +127,7 @@ button{
 }
 .number {
     padding-top:6%;
+    text-decoration: none;
 }
 /*footer starts here*/
 footer{
@@ -154,11 +151,11 @@ footer{
 .headquarter address {
     line-height: 60px;;
 }
-/*responsive design starts here*/
+/*contactPage responsive design starts here*/
 @media(max-width:500px){
-    .logo{
-        width: 20%;
-        margin-left: 4%;
+    header img {
+        width: 15%;
+        margin-top: 36%;
     }
     .links nav {
         padding-top: 45%;
@@ -168,5 +165,74 @@ footer{
     }
     .googleMap{
         width: 250px;
+    }
+}
+/*marketPage CSS starts here*/
+/*header starts here*/
+.headerMar{
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/6c9a9a99-9c38-417e-a7f5-a45ede9b3407-1532627926.jpg");
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    border: 5px black;
+}
+/*body starts here*/
+#marketSection {
+    padding-top: 1%;
+    padding-bottom: 5%;
+    background-color:#F5F5DC ;
+}
+.img {
+    width: 35%;
+    height: 200px;
+}
+.parag {
+    width: 35%;
+    height: 180px;
+    line-height: 25px;
+}
+#marketSection div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+section div span {
+    line-height: 35px;
+    text-align: right;
+}
+/*footer starts here*/
+.marFooter {
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/6c9a9a99-9c38-417e-a7f5-a45ede9b3407-1532627926.jpg");
+    background-position:center;
+    background-size: cover;
+    height: 70px;
+}
+footer img {
+    width:10%;
+    height: 37px;
+    margin-top: 1%;
+}
+footer nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+footer nav a{
+    text-decoration: none;
+    color:#F5F5DC ;
+}
+/*marketPage responsive design starts here*/
+@media(max-width:500px){
+    .parag {
+        line-height: 18px;
+        font-size: 14px;
     }
 }

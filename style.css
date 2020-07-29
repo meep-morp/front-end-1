@@ -58,7 +58,7 @@ header {
 }
 header img{
     width: 10%;
-    height: 49px;
+    height: 47px;
 }
 .links {
     width: 100%;
@@ -68,7 +68,7 @@ header img{
     justify-content: space-evenly;
     padding-left: 40%;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     background-color: black;
 }
 .links nav a {
@@ -139,6 +139,9 @@ footer{
     border-top: solid gray;
     padding-top: 2%;
 }
+.email {
+    text-decoration: none;
+}
 .headquarter {
     display: flex;
     flex-direction: column;
@@ -203,6 +206,7 @@ footer{
 .img {
     width: 35%;
     height: 200px;
+    object-fit: fill;
 }
 .parag {
     width: 35%;

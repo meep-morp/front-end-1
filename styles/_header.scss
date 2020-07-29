@@ -60,6 +60,31 @@
     }
   }
 
+  #about-header {
+    .logo-nav-container {
+      background-color: black;
+      display: flex;
+      justify-content: space-evenly;
+      .logo {
+        @include flexCenter(row, center);
+        margin: 0 0 0 3%;
+        width: 10%;
+        i {
+          padding: 3%;
+        }
+      }
+      .nav-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin: 0 3% 0 0;
+        a {
+          @include navBar();
+        }
+      }
+    }
+  }
+
   .slogan-container {
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
@@ -69,9 +94,9 @@
     .header-button {
       @include flexCenter(row, center);
       width: 100%;
-    }
-    button {
-      @include primaryButton();
+      button {
+       @include primaryButton();
+      }
     }
   }
 }

@@ -37,6 +37,7 @@ button {
 }
 
 .landbuttons {
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -45,6 +46,7 @@ button {
 }
 
 .Login {
+  font-family: 'Quicksand', sans-serif;
   border-radius: 25px;
   padding: 2vh; 
   margin: 2vh; 
@@ -53,12 +55,19 @@ button {
 }
 
 header {
-  
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: 50px;
   color:whitesmoke;
   background-color: black;
   width: 100%;
   align-items: baseline;
+  
+}
+
+h1 {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 2rem;
 }

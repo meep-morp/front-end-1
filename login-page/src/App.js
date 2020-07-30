@@ -11,10 +11,7 @@ function App() {
   return (
     <>
     <header>
-          <div class="logo">
-            <i class="fas fa-search-dollar"></i>
-            <h1>landbnb</h1>
-          </div>
+      <h1>landbnb</h1>
     </header>
     <div className='landbuttons'>
       <button color="primary" size="lg">

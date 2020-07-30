@@ -64,7 +64,7 @@ export default function Login() {
     .then(res => {
       console.log(res.data)
       localStorage.setItem('token', res.data.access_token);
-      // UseHistory.push('/');
+      window.location.assign("/dashboard")
     })
     .catch(err => {
       console.log(err);

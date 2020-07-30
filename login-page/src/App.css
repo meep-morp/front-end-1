@@ -20,6 +20,12 @@ time, mark, audio, video {
     /* border:0.5px solid black; */
 }
 
+.dark {
+	background: none;
+	background: rgb(70, 73, 80);
+    color: white;
+}
+
 button {
   margin: 3vh;
   padding: 2vh; 
@@ -64,6 +70,79 @@ header {
   color:whitesmoke;
   background-color: black;
   width: 100%;
+}
+
+nav {
+  background: linear-gradient(to  right, #a35d0c 0%, #ccc922 100%);
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  right: 0;
+  color: white;
+}
+
+#dashNav {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+}
+
+
+#darkMode {
+	-webkit-appearance: none;
+	outline: none;
+	background-color: rgb(241, 184, 76);
+	height: 20px;
+	width: 40px;
+	border-radius: 20px;
+	transition: 0.4s ease;
+	z-index: 3;
+}
+
+#darkMode:checked {
+	background-color: rgb(216, 238, 120);
+}
+
+#darkMode::before {
+	content: "";
+	position: absolute;
+	background-color: white;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+}
+
+nav .signout {
+  color: rgb(248, 81, 81);
+  cursor: pointer 
+}
+
+#darkMode:checked::before {
+	transform: translateX(25px);
+	transition: 0.4s ease;
+}
+
+.listings {
+  text-align: center;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.cards {
+  width: 45vw;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  margin: 5px;
+  text-align: center;
+}
+
+.cards img {
+  border-radius: 20px;
 }
 
 h1 {

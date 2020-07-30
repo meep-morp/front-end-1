@@ -1,133 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import * as yup from 'yup';
-import formSchema from './FormSchema';
-import './App.css';
-
-const initialFormValues = {
-  "username": '',
-  "password": '',
-  "primaryemail": '',
-}
-
-const initialFormErrors = {
-  "username": '',
-  "password": '',
-  "primaryemail": '',
-}
-const initialDisabled = true;
+import React from 'react';
+import Register from './Register'
+import Login from './Login';
+import { Route, Link } from 'react-router-dom';
+// import { Button } from 'reactstrap';
+import './App.css'; 
 
 function App() {
 
-  const [formValues, setFormValues] = useState(initialFormValues);
-  const [formErrors, setFormErrors] = useState(initialFormErrors);
-  const [disabled, setDisabled] = useState(initialDisabled);
-  console.log(formValues)
-
-  const changeHandler = (name, value) => {
-    yup 
-      .reach(formSchema, name)
-      .validate(value)
-      .then((valid) => {
-        console.log(valid)
-        setFormErrors({
-          ...formErrors,
-          [name]: '',
-        });
-      })
-      .catch((e) => {
-        setFormErrors({
-          ...formErrors, 
-          [name]: e.errors[0],
-        });
-      });
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
-  };
-
-  const onChange = evt => {
-    setFormValues({...formValues, [evt.target.name]: evt.target.value})
-    const { name, value } = evt.target
-    changeHandler(name,value)
-  }
-
-  const onSubmit = evt => {
-    evt.preventDefault()
-    const newUser = {
-      username: formValues.username.trim(),
-      password: formValues.password.trim(),
-      primaryemail: formValues.primaryemail.trim(),
-    }
-   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/createnewuser', newUser)
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => {
-      debugger;
-    })
-  }
-
-  useEffect(() => {
-    formSchema.isValid(formValues)
-      .then((valid) => {
-        setDisabled(!valid)
-      })
-  }, [formValues])
-
-
+  
   return (
-    <div className='Login'>
-     <form onSubmit={onSubmit}>
-      <div className='login-inputs'>
-        <label htmlFor='username'>Username:
-          <input
-            id='username'
-            name='username'
-            type='text'
-            placeholder='Enter username'
-            maxLength='20'
-            value={formValues.username}
-            onChange={onChange}
-          />
-        </label>
-
-        <label htmlFor='password'>Password:
-          <input
-            id='password'
-            name='password'
-            type='password'
-            placeholder='Enter password'
-            maxLength='20'
-            value={formValues.password}
-            onChange={onChange}
-          />
-        </label>
-
-        <label htmlFor='primaryemail'>Primary Email:
-          <input
-            id='primaryemail'
-            name='primaryemail'
-            type='text'
-            placeholder='Enter email'
-            maxLength='30'
-            value={formValues.primaryemail}
-            onChange={onChange}
-          />
-        </label>
-      </div>
-      <div className='form-group submit'>
-        <button disabled={disabled} type='submit'>Submit</button>
-      </div> 
-     </form>
-     <div>
-       {formErrors.username}
-       {formErrors.password}
-       {formErrors.primaryemail}
-     </div>
-    </div>
-  );
+    <>
+    <header>
+      <h1>landbnb</h1>
+    </header>
+    <div className='landbuttons'>
+      
+        <Link className='RegLink' to='/register'>
+          <button color="primary" size="lg"> Register Here </button>
+        </Link>
+      
+        <Route exact path='/register'>
+          <Register />
+        </Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+      
+        <Link className ='RegLink' to='/login'>
+          <button color="primary" size="lg">Already a user?</button>
+        </Link>
+      
+    </div> 
+    </>
+  )
 }
 
 export default App;

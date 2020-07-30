@@ -1,32 +1,11 @@
-@import "./variables";
-@import "./header";
+//Import
 
-//Mixins
-
-@mixin aboutImage {
-  length: 300px;
-  width: 300px;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
-}
-
-@mixin aboutImageAndText {
-  margin: 0 5% 0 5%;
-  border-radius: 10%;
-  border-bottom: $borderColor;
-  border-right: $borderColor;
-  border-left: $borderColor;
-}
-
-@mixin aboutUsImage {
-  length: 250px;
-  width: 250px;
-  border-radius: 50px;
-}
+@import "./imports";
 
 //General
 
 html {
+  font-size: 62.5%;
   font-family: "Quicksand", sans-serif;
   color: $primaryTextColor;
 }
@@ -45,32 +24,35 @@ h3 {
   background-color: white;
   padding: 5%;
   .about-container {
+    width: 100%;
     @include flexCenter(column, center);
     .about-text {
-      @include flexCenter(column, center);
-      margin: 0 0 5% 0;
-      line-height: 0.5rem;
-      h3 {
-        font-size: 1.8rem;
-      }
-      h4 {
-        font-size: 1rem;
-      }
+      @include aboutText();
     }
     .about-images {
       @include flexCenter(row, center);
+      width: 100%;
       font-weight: 600;
       .about-location {
         @include flexCenter(column, center);
         @include aboutImageAndText();
+        .location {
+          @include aboutText();
+        }
       }
       .about-time {
         @include flexCenter(column, center);
         @include aboutImageAndText();
+        .time {
+          @include aboutText();
+        }
       }
       .about-features {
         @include flexCenter(column, center);
         @include aboutImageAndText();
+        .features-text {
+          @include aboutText();
+        }
       }
       img {
         @include aboutImage();
@@ -86,7 +68,11 @@ h3 {
     margin: 0 0 5% 0;
     text-align: center;
     color: $primaryTextColor;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    h3 {
+      font-size: 2.5rem;
+      padding: 2%;
+    }
     button {
       @include primaryButton();
     }
@@ -98,40 +84,19 @@ h3 {
   }
 }
 
-#footer {
-  background-color: $backgroundColorTurquoise;
-  padding: 1%;
-  .footer-container {
-    display: flex;
-    justify-content: space-evenly;
-    .footer-container-right {
-      display: flex;
-      justify-content: space-evenly;
-      width: 30%;
-      .social-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        a {
-          color: $primaryTextColor;
-          margin: 20%;
-        }
-      }
-    }
-  }
-}
-
 //About Us
 
 .person {
   @include flexCenter(row, flex-start);
+  font-size: 1.8rem;
   img {
     @include aboutUsImage;
   }
   h4 {
     text-align: center;
     margin: 0 0 10% 0;
+    font-weight: 600;
+    padding: 5%;
   }
   .bio-container {
     padding: 0 0 0 5%;

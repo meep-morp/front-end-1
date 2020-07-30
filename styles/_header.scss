@@ -1,39 +1,4 @@
-//Mixins
-
-@mixin flexCenter($direction, $align) {
-  display: flex;
-  justify-content: center;
-  flex-direction: $direction;
-  align-items: $align;
-}
-
-@mixin backgroundImage($image) {
-  height: 80vh;
-  background-image: $image;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-@mixin navBar {
-  text-decoration: none;
-  color: $primaryTextColor;
-  padding: 2% 2% 2% 2%;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-@mixin primaryButton {
-  background-color: $backgroundColorPink;
-  color: $primaryTextColor;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
-  padding: 1%;
-}
-
-//CSS
+//Header
 
 //Homepage
 
@@ -43,16 +8,11 @@
   );
   .logo-nav-container {
     background-color: black;
-    padding: 1%;
+    padding: 2%;
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -63,7 +23,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -71,7 +31,8 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      padding: 2%;
+      font-size: 3rem;
     }
     .header-button {
       @include flexCenter(row, center);
@@ -80,12 +41,12 @@
         @include primaryButton();
         button {
           border: none;
-          font-size: 1rem;
+          font-size: 1.5rem;
           background-color: $backgroundColorPink;
           color: $primaryTextColor;
         }
         button:hover {
-          font-size: 1.1rem;;
+          font-size: 1.7rem;
         }
       }
     }
@@ -99,16 +60,11 @@
   );
   .logo-nav-container {
     background-color: black;
-    padding: 1%;
+    padding: 2%;
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -119,7 +75,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -127,7 +83,7 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      font-size: 3rem;
       color: $secondaryTextColor;
     }
     .header-button {
@@ -154,16 +110,11 @@
   );
   .logo-nav-container {
     background-color: black;
-    padding: 1%;
+    padding: 2%;
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -174,7 +125,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -182,60 +133,7 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
-    }
-    .header-button {
-      @include flexCenter(row, center);
-      width: 100%;
-      a {
-        @include primaryButton();
-        button {
-          border: none;
-          font-size: 1rem;
-          background-color: $backgroundColorPink;
-          color: $primaryTextColor;
-        }
-      }
-    }
-  }
-}
-
-//Get Started
-#get-started-header {
-  @include backgroundImage(
-    url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80")
-  );
-  .logo-nav-container {
-    background-color: black;
-    padding: 1%;
-    display: flex;
-    justify-content: space-evenly;
-    .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
-    }
-    .nav-container {
-      display: flex;
-      justify-content: flex-end;
-      width: 90%;
-      margin: 0 3% 0 0;
-      a {
-        @include navBar();
-      }
-      a:hover {
-        font-size: 1.1rem;
-      }
-    }
-  }
-  .slogan-container {
-    @include flexCenter(column, center);
-    margin: 15% 0 10% 0;
-    .slogan {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
     .header-button {
       @include flexCenter(row, center);

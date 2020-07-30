@@ -60,14 +60,22 @@ function App() {
       password: formValues.password.trim(),
       primaryemail: formValues.primaryemail.trim(),
     }
-   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/createnewuser', newUser)
+
+   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/createnewuser', `grant_type=password&username=${newUser.username}&password=${newUser.password}`, {
+     headers: {
+      Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
+     }
+   })
     .then(res => {
       console.log(res);
     })
     .catch(err => {
-      debugger;
+      // debugger;
+      console.log(err);
     })
   }
+
 
   useEffect(() => {
     formSchema.isValid(formValues)

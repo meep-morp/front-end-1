@@ -14,18 +14,22 @@ function App() {
       <h1>landbnb</h1>
     </header>
     <div className='landbuttons'>
-      <button color="primary" size="lg">
-        <Link className='RegLink' to='/register'> Register Here </Link>
-      </button>
+      
+        <Link className='RegLink' to='/register'>
+          <button color="primary" size="lg"> Register Here </button>
+        </Link>
+      
         <Route exact path='/register'>
           <Register />
         </Route>
         <Route exact path='/login'>
           <Login />
         </Route>
-      <button color="primary" size="lg">
-        <Link className ='RegLink' to='/login'> Already a user?  </Link>
-      </button>
+      
+        <Link className ='RegLink' to='/login'>
+          <button color="primary" size="lg">Already a user?</button>
+        </Link>
+      
     </div> 
     </>
   )

@@ -27,28 +27,31 @@ button {
   border-radius: 20px;
 }
 
-.RegLink {
+.RegLink button {
   color: whitesmoke;
   font-size: large; 
   font-family: 'Quicksand', sans-serif;
   font-style: bold;
   border-radius: 25px; 
- 
+  
 }
 
 .landbuttons {
   font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 50%;
   margin: auto; 
   padding: 3vh; 
+  align-items: center;
 }
 
 .Login {
   font-family: 'Quicksand', sans-serif;
   border-radius: 25px;
-  padding: 2vh; 
+  padding: 5vh; 
+  padding-left: 10vh;
+  padding-right: 10vh;
   margin: 2vh; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -57,12 +60,10 @@ button {
 header {
   display: flex;
   flex-direction: row;
-  height: 7vh;
+  height: 10vh;
   color:whitesmoke;
   background-color: black;
   width: 100%;
-  align-items: baseline;
-  
 }
 
 h1 {

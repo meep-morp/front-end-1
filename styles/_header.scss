@@ -1,39 +1,4 @@
-//Mixins
-
-@mixin flexCenter($direction, $align) {
-  display: flex;
-  justify-content: center;
-  flex-direction: $direction;
-  align-items: $align;
-}
-
-@mixin backgroundImage($image) {
-  height: 80vh;
-  background-image: $image;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-@mixin navBar {
-  text-decoration: none;
-  color: $primaryTextColor;
-  padding: 2% 2% 2% 2%;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-@mixin primaryButton {
-  background-color: $backgroundColorPink;
-  color: $primaryTextColor;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
-  padding: 1%;
-}
-
-//CSS
+//Header
 
 //Homepage
 
@@ -85,7 +50,7 @@
           color: $primaryTextColor;
         }
         button:hover {
-          font-size: 1.1rem;;
+          font-size: 1.1rem;
         }
       }
     }

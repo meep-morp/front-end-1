@@ -1,0 +1,25 @@
+//Footer
+
+#footer {
+  background-color: $backgroundColorTurquoise;
+  padding: 1%;
+  .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    .footer-container-right {
+      display: flex;
+      justify-content: space-evenly;
+      width: 30%;
+      .social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+          color: $primaryTextColor;
+          margin: 20%;
+        }
+      }
+    }
+  }
+}

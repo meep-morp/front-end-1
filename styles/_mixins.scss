@@ -1,0 +1,55 @@
+//Mixins
+
+@mixin aboutImage {
+  length: 300px;
+  width: 300px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+@mixin aboutImageAndText {
+  margin: 0 5% 0 5%;
+  border-radius: 10%;
+  border-bottom: $borderColor;
+  border-right: $borderColor;
+  border-left: $borderColor;
+}
+
+@mixin aboutUsImage {
+  length: 250px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+@mixin flexCenter($direction, $align) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin backgroundImage($image) {
+  height: 80vh;
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@mixin navBar {
+  text-decoration: none;
+  color: $primaryTextColor;
+  padding: 2% 2% 2% 2%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@mixin primaryButton {
+  background-color: $backgroundColorPink;
+  color: $primaryTextColor;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+}

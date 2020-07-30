@@ -5,7 +5,7 @@
 //General
 
 html {
-  font-size:62.5%;
+  font-size: 62.5%;
   font-family: "Quicksand", sans-serif;
   color: $primaryTextColor;
 }
@@ -27,21 +27,7 @@ h3 {
     width: 100%;
     @include flexCenter(column, center);
     .about-text {
-      @include flexCenter(column, center);
-      width: 100%;
-      margin: 0 0 5% 0;
-      .about-heading {
-        font-size: 2.5rem;
-        padding: 1%;
-        width: 100%;
-        text-align: center;
-      }
-      .about-subheading {
-        font-size: 1.8rem;
-        padding: 1%;
-        width: 100%;
-        text-align: center;
-      }
+      @include aboutText();
     }
     .about-images {
       @include flexCenter(row, center);
@@ -51,24 +37,21 @@ h3 {
         @include flexCenter(column, center);
         @include aboutImageAndText();
         .location {
-          font-size: 1.8rem;
-          padding: 5%;
+          @include aboutText();
         }
       }
       .about-time {
         @include flexCenter(column, center);
         @include aboutImageAndText();
         .time {
-          font-size: 1.8rem;
-          padding: 5%;
+          @include aboutText();
         }
       }
       .about-features {
         @include flexCenter(column, center);
         @include aboutImageAndText();
         .features-text {
-          font-size: 1.8rem;
-          padding: 5%;
+          @include aboutText();
         }
       }
       img {
@@ -86,6 +69,10 @@ h3 {
     text-align: center;
     color: $primaryTextColor;
     font-size: 2rem;
+    h3 {
+      font-size: 2.5rem;
+      padding: 2%;
+    }
     button {
       @include primaryButton();
     }
@@ -101,12 +88,15 @@ h3 {
 
 .person {
   @include flexCenter(row, flex-start);
+  font-size: 1.8rem;
   img {
     @include aboutUsImage;
   }
   h4 {
     text-align: center;
     margin: 0 0 10% 0;
+    font-weight: 600;
+    padding: 5%;
   }
   .bio-container {
     padding: 0 0 0 5%;

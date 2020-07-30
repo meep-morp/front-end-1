@@ -1,40 +1,41 @@
 //Mixins
 
 @mixin backgroundImage($image) {
-    height: 80vh;
-    background-image: $image;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  height: 80vh;
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@mixin logo {
+  @include flexCenter(row, center);
+  font-size: 2.5rem;
+  margin: 0 0 0 3%;
+  width: 10%;
+  i {
+    padding: 3%;
   }
-  
-  @mixin logo {
-      @include flexCenter(row, center);
-      font-size: 2.5rem;
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
-  }
-  
-  @mixin navBar {
-    text-decoration: none;
-    color: $primaryTextColor;
-    padding: 2% 2% 2% 2%;
-    font-weight: 600;
-    font-size: 1.6rem;
-  }
-  
-  @mixin primaryButton {
-    background-color: $backgroundColorPink;
-    color: $primaryTextColor;
-    border-radius: 10px;
-    border: none;
-    padding: 1%;
-  }
-  
+}
+
+@mixin navBar {
+  text-decoration: none;
+  color: $primaryTextColor;
+  padding: 2%;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+@mixin primaryButton {
+  background-color: $backgroundColorPink;
+  color: $primaryTextColor;
+  border-radius: 10px;
+  border: none;
+  padding: 1%;
+  font-size: 1.5rem;
+}
+
 @mixin aboutImage {
   length: 300px;
   width: 300px;
@@ -50,6 +51,24 @@
   border-left: $borderColor;
 }
 
+@mixin aboutText {
+    @include flexCenter(column, center);
+    width: 100%;
+    margin: 0 0 5% 0;
+    .about-heading {
+      font-size: 2.5rem;
+      padding: 1%;
+      width: 100%;
+      text-align: center;
+    }
+    .about-subheading {
+      font-size: 1.8rem;
+      padding: 1%;
+      width: 100%;
+      text-align: center;
+    }
+}
+
 @mixin aboutUsImage {
   length: 250px;
   width: 250px;
@@ -62,5 +81,3 @@
   flex-direction: $direction;
   align-items: $align;
 }
-
-

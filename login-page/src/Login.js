@@ -52,21 +52,25 @@ export default function Login() {
     changeHandler(name,value)
   }
 
-  const onSubmit = evt => {
-    const logUser = {
-      username: formValues.username.trim(),
-      password: formValues.password.trim(),
-    }
-    console.log(logUser);
-   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/login', logUser)
+  const onSubmit = e => {
+    e.preventDefault();
+    axios.post('https://kmcgeeka-airbnboptimal.herokuapp.com/login', `grant_type=password&username=${formValues.username}&password=${formValues.password}`, {
+      headers: {
+        // btoa is converting our client id/client secret into base64
+        Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
     .then(res => {
-      console.log(res);
+      console.log(res.data)
+      localStorage.setItem('token', res.data.access_token);
+      // UseHistory.push('/');
     })
     .catch(err => {
       console.log(err);
-      debugger;
     })
   }
+
 
   useEffect(() => {
     formSchema.isValid(formValues)

@@ -12,12 +12,7 @@
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -28,7 +23,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -36,7 +31,8 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      padding: 2%;
+      font-size: 3rem;
     }
     .header-button {
       @include flexCenter(row, center);
@@ -45,12 +41,12 @@
         @include primaryButton();
         button {
           border: none;
-          font-size: 1rem;
+          font-size: 1.5rem;
           background-color: $backgroundColorPink;
           color: $primaryTextColor;
         }
         button:hover {
-          font-size: 1.1rem;
+          font-size: 1.8rem;
         }
       }
     }
@@ -68,12 +64,7 @@
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -84,7 +75,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -92,7 +83,7 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      font-size: 3rem;
       color: $secondaryTextColor;
     }
     .header-button {
@@ -123,12 +114,7 @@
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -139,7 +125,7 @@
         @include navBar();
       }
       a:hover {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -147,7 +133,7 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
     .header-button {
       @include flexCenter(row, center);
@@ -176,12 +162,7 @@
     display: flex;
     justify-content: space-evenly;
     .logo {
-      @include flexCenter(row, center);
-      margin: 0 0 0 3%;
-      width: 10%;
-      i {
-        padding: 3%;
-      }
+      @include logo();
     }
     .nav-container {
       display: flex;
@@ -200,7 +181,7 @@
     @include flexCenter(column, center);
     margin: 15% 0 10% 0;
     .slogan {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
     .header-button {
       @include flexCenter(row, center);

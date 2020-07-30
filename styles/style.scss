@@ -27,7 +27,7 @@ h3 {
     width: 100%;
     @include flexCenter(column, center);
     .about-text {
-      @include aboutText();
+      @include aboutHeading();
     }
     .about-images {
       @include flexCenter(row, center);

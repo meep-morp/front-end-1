@@ -51,22 +51,27 @@
   border-left: $borderColor;
 }
 
-@mixin aboutText {
-    @include flexCenter(column, center);
+@mixin aboutHeading {
+  @include flexCenter(column, center);
+  width: 100%;
+  margin: 0 0 5% 0;
+  .about-heading {
+    font-size: 2.5rem;
+    padding: 1%;
     width: 100%;
-    margin: 0 0 5% 0;
-    .about-heading {
-      font-size: 2.5rem;
-      padding: 1%;
-      width: 100%;
-      text-align: center;
-    }
-    .about-subheading {
-      font-size: 1.8rem;
-      padding: 1%;
-      width: 100%;
-      text-align: center;
-    }
+    text-align: center;
+  }
+  .about-subheading {
+    font-size: 1.8rem;
+    padding: 1%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@mixin aboutText {
+  padding: 5%;
+  font-size: 1.6rem;
 }
 
 @mixin aboutUsImage {

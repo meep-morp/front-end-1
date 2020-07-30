@@ -123,7 +123,7 @@ export default function Register() {
             </FormGroup>
             </div>
             <div className='form-group submit'>
-                <Button disabled={disabled} onClick={onSubmit}>Register</Button>
+                <Button color ='info' disabled={disabled} onClick={onSubmit}>Register</Button>
             </div> 
         </Form>
      <div>

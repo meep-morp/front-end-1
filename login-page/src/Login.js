@@ -108,7 +108,7 @@ export default function Login() {
             </FormGroup>
             </div>
             <div className='form-group submit'>
-                <Button disabled={disabled} onClick={onSubmit}>Login</Button>
+                <Button color ='info' disabled={disabled} onClick={onSubmit}>Login</Button>
             </div> 
         </Form>
      <div>

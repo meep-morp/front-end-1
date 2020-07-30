@@ -2,7 +2,24 @@
 
 @media (max-width: 1920px) {
   /*Header*/
-
+  #homepage-header {
+    height: 90vh;
+    .slogan-container {
+      margin: 5% 0 10% 0;
+    }
+  }
+  #safety-header {
+    height: 90vh;
+    .slogan-container {
+      margin: 9% 0;
+    }
+  }
+  #about-header {
+    height: 90vh;
+    .slogan-container {
+      margin: 9% 0;
+    }
+  }
   /*Body*/
 
   /*Footer*/

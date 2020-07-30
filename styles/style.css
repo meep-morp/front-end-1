@@ -572,25 +572,111 @@ table {
   #about-header .slogan-container {
     margin: 9% 0;
   }
-  /*Body*/
-  /*Footer*/
 }
 
 @media (max-width: 1366px) {
   /*Header*/
-  /*Body*/
-  /*Footer*/
+  #homepage-header {
+    height: 90vh;
+  }
+  #homepage-header .slogan-container {
+    margin: 10% 0;
+  }
+  #safety-header {
+    height: 90vh;
+  }
+  #safety-header .slogan-container {
+    margin: 15% 0;
+  }
+  #about-header {
+    height: 90vh;
+  }
+  #about-header .slogan-container {
+    margin: 15% 0;
+  }
 }
 
 @media (max-width: 800px) {
   /*Header*/
+  #homepage-header {
+    height: 90vh;
+  }
+  #homepage-header .slogan-container {
+    margin: 25% 0;
+  }
+  #safety-header {
+    height: 90vh;
+  }
+  #safety-header .slogan-container {
+    margin: 30% 0;
+  }
+  #about-header {
+    height: 90vh;
+  }
+  #about-header .slogan-container {
+    margin: 30% 0;
+  }
   /*Body*/
-  /*Footer*/
+  .about-images {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-images .about-location {
+    margin: 5% 0;
+  }
+  .about-images .about-time {
+    margin: 5% 0;
+  }
+  .about-images .about-features {
+    margin: 5% 0;
+  }
 }
 
 @media (max-width: 500px) {
   /*Header*/
+  #homepage-header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5rem;
+    margin: 0 0 0 3%;
+    width: 10%;
+  }
+  #homepage-header .logo i {
+    padding: 3%;
+  }
+  #homepage-header .nav-container a {
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  #homepage-header .nav-container a:hover {
+    font-size: 1.2rem;
+  }
+  #homepage-header .slogan {
+    padding: 3%;
+    font-size: 2.3rem;
+    text-align: center;
+  }
   /*Body*/
+  .about-images img {
+    length: 200px;
+    width: 200px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+  }
   /*Footer*/
 }
 

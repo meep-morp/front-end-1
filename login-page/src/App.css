@@ -85,6 +85,25 @@ form div {
   transition: 0.3s ease;
 }
 
+.edit, .view{
+  margin-top: 10px;
+  background-color: rgb(240, 171, 45);
+
+  padding: 2vh; 
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+
+  color: white;
+  letter-spacing: 2px;
+}
+
+.edit:hover, .view:hover{
+  background-color: rgb(255, 219, 153);
+  transition: 0.3s ease;
+}
+
 button {
   margin: 3vh;
   padding: 2vh; 
@@ -92,6 +111,7 @@ button {
   background-color: #E8505B;
   border-radius: 20px;
   border: none;
+  outline: none;
 
   color: white;
   letter-spacing: 2px;

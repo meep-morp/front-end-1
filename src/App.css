@@ -20,8 +20,15 @@ time, mark, audio, video {
     /* border:0.5px solid black; */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&display=swap');
+
 body {
   transition: all 0.3s ease;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
 }
 
 form {
@@ -194,6 +201,16 @@ nav {
 
 nav a {
   color: white;
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: rgb(221, 171, 34);
+  text-shadow: 0 0 2px black;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 2px;
 }
 
 #dashNav {

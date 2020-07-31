@@ -10,7 +10,7 @@ const Listings = props => {
         max = Math.floor(max);
         return Math.round(Math.random() * (max - min + 1) + min);
     }
-
+//
     useEffect(() => {
         axiosWithAuth()
             .get(`https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listings`)

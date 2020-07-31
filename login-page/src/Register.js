@@ -60,7 +60,7 @@ export default function Register() {
       primaryemail: formValues.primaryemail.trim(),
     }
     console.log(newUser);
-   axios.post('https://kmcgeeka-airbnboptimal.herokapp.com/createnewuser', newUser)
+   axios.post('https://kmcgeeka-airbnboptimal.herokuapp.com/createnewuser', newUser)
     .then(res => {
       console.log(res);
     })

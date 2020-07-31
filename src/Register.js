@@ -63,6 +63,8 @@ export default function Register() {
    axios.post('https://kmcgeeka-airbnboptimal.herokuapp.com/createnewuser', newUser)
     .then(res => {
       console.log(res);
+      localStorage.setItem('token', res.data.access_token);
+      window.location.assign("/dashboard")
     })
     .catch(err => {
       console.log(err);

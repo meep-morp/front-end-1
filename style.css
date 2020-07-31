@@ -251,8 +251,16 @@ section div span {
     line-height: 35px;
     text-align: right;
 }
+section .graph {
+    display: flex;
+    flex-direction:row-reverse;
+}
+ .paragGraph {
+    width: 35%;
+    line-height: 28px;
+}
 section div iframe {
-    width:80%;
+    width:40%;
     height: 400px;
     object-fit: fill;
 }
@@ -294,9 +302,28 @@ footer nav a{
     header nav a {
         font-size: 10px;
     }
+    section .graph{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .paragGraph {
+        font-size: 11px;
+        line-height: 10px;
+        width: 80%;
+        height: 290px;
+        text-align: center;
+    }
+    section .paragGraph{
+        font-size: 11px;
+        line-height: 30px;
+    }
+    section div iframe {
+        width: 80%;
+    }
     .parag {
-        line-height: 18px;
-        font-size: 10px;
+        line-height: 23px;
+        font-size: 11px;
     }
     footer h6 {
         width: 13%;
@@ -307,5 +334,12 @@ footer nav a{
 @media(max-width:800px){
     header h6 {
         height: 41px;
+    }
+    .parag{
+       line-height: 23px; 
+    }
+    .paragGraph{
+        line-height: 23px;
+        font-size: 15px;
     }
 }

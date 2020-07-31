@@ -1,37 +1,31 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { axiosWithAuth } from "../utils/AxiosWIthAuth"
+import React from "react";
+import { axiosWithAuth } from "../utils/AxiosWIthAuth";
 
-const Listings = props => {
-    const [listings, setListings] = useState([]);
+const Profile = ({ userDetails, setUserDetails }) => {
 
-    const UseRandom = (min, max) => {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.round(Math.random() * (max - min + 1) + min);
-    }
-
-    useEffect(() => {
+    const onDelete = id => {
         axiosWithAuth()
-            .get(`https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listings`)
+            .delete(`https://kmcgeeka-airbnboptimal.herokuapp.com/listings/delete/${id}`)
             .then(res => {
                 console.log(res);
-                setListings(res.data);
+                setUserDetails({ ...userDetails, list: userDetails.list.filter(list => (list.id !== id)) });
+                window.location.assign("/dashboard/profile")
             })
             .catch(err => {
                 console.log(err);
             })
-    }, [])
+    }
 
     return (
-        <div className="listings">
-            <h2>Available Houses</h2>
+        <div className="profile">
+            <h2>My Listings</h2>
             {
-                listings.map(list => {
+                userDetails.list.map(list => {
                     return (
-                        <div className="cards">
+                        <div className="cards profileCard">
                             <div className="left">
                                 <img src="https://freedesignfile.com/upload/2012/09/Houses-3-.jpg" alt="" />
+                                <button onClick={() => onDelete(list.listingid)}>Delete</button>
                             </div>
                             <div className="info">
                                 <h3>
@@ -65,7 +59,7 @@ const Listings = props => {
                                 </h3>
                                 <h3>
                                     <img src="https://image.flaticon.com/icons/svg/631/631180.svg" alt="" />
-                                    {list.price == "click for price" ? `${UseRandom(50, 100)}.00` : list.price}</h3>
+                                    {list.price}</h3>
                             </div>
                         </div>
                     )
@@ -75,4 +69,4 @@ const Listings = props => {
     )
 }
 
-export default Listings;
+export default Profile;

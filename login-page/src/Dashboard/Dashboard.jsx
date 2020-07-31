@@ -6,18 +6,19 @@ import DashNav from "./dashNav";
 import Listings from "./Listings";
 import { AppContext } from "../context/AppContext";
 import { axiosWithAuth } from "../utils/AxiosWIthAuth";
+import AddListing from "./AddListing";
+import Profile from "./Profile";
 
 
 const Dashboard = props => {
-    // const [userDetails, setUserDetails] = useContext(AppContext);
-    const [userDetails, setUserDetails] = useState({})
+    const [userDetails, setUserDetails] = useState({list: []})
 
     useEffect(() => {
         axiosWithAuth()
             .get(`https://kmcgeeka-airbnboptimal.herokuapp.com/users/myinfo`)
             .then(res => {
                 console.log(res);
-                setUserDetails(res);
+                setUserDetails(res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -26,10 +27,17 @@ const Dashboard = props => {
 
     return (
         <div className="dashboard">
-            <DashNav />
-            <Listings />
+            <DashNav userDetails={userDetails} />
             <Router>
-                 
+                <PrivateRoute path="/dashboard" exact>
+                    <Listings />
+                </PrivateRoute>
+                <PrivateRoute path="/dashboard/addlisting">
+                    <AddListing userDetails={userDetails} />
+                </PrivateRoute>
+                <PrivateRoute path="/dashboard/profile">
+                    <Profile userDetails={userDetails} setUserDetails={setUserDetails} />
+                </PrivateRoute>
             </Router>
         </div>
     )

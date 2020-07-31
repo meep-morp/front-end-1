@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useDarkMode } from "../hooks/useDarkMode";
 
-const DashNav = props => {
+const DashNav = ({userDetails}) => {
     const [darkMode, setDarkMode, toggle] = useDarkMode(false);
 
     useEffect(() => {
@@ -30,7 +30,11 @@ const DashNav = props => {
                 onClick={toggle}
                 checked={darkMode}
             />
-            <a className="signout" onClick={logOut}>Sign Out</a>
+            <a href="/dashboard/profile">{userDetails.username}</a>
+            <a href="/dashboard">View Listings</a>
+            <a href="/dashboard/addlisting">Create Listing</a>
+
+            <a onClick={logOut} className="logout" href="/login">Logout</a>
         </nav>
     )
 }

@@ -5,6 +5,7 @@ import formSchema from './FormSchemaLogin';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import './App.css';
+import { axiosWithAuth } from './utils/AxiosWIthAuth';
 
 const initialFormValues = {
   "username": '',
@@ -54,7 +55,8 @@ export default function Login() {
 
   const onSubmit = e => {
     e.preventDefault();
-    axios.post('https://kmcgeeka-airbnboptimal.herokuapp.com/login', `grant_type=password&username=${formValues.username}&password=${formValues.password}`, {
+    axios
+    .post('https://kmcgeeka-airbnboptimal.herokuapp.com/login', `grant_type=password&username=${formValues.username}&password=${formValues.password}`, {
       headers: {
         // btoa is converting our client id/client secret into base64
         Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,

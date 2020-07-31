@@ -12,6 +12,7 @@ import Profile from "./Profile";
 
 const Dashboard = props => {
     const [userDetails, setUserDetails] = useState({list: []})
+    const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         axiosWithAuth()
@@ -33,10 +34,10 @@ const Dashboard = props => {
                     <Listings />
                 </PrivateRoute>
                 <PrivateRoute path="/dashboard/addlisting">
-                    <AddListing userDetails={userDetails} />
+                    <AddListing userDetails={userDetails} isEditing={isEditing} setIsEditing={setIsEditing}/>
                 </PrivateRoute>
                 <PrivateRoute path="/dashboard/profile">
-                    <Profile userDetails={userDetails} setUserDetails={setUserDetails} />
+                    <Profile userDetails={userDetails} setUserDetails={setUserDetails} isEditing={isEditing} setIsEditing={setIsEditing} />
                 </PrivateRoute>
             </Router>
         </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/AxiosWIthAuth";
 
-const AddListing = ({ userDetails }) => {
-    const [newListing, setNewListing] = useState({ city: "NYC" });
+const AddListing = ({ userDetails, values, type, isEditing, setIsEditing}) => {
+    const [newListing, setNewListing] = useState({ ...values, city: "NYC" });
     const [message, setMessage] = useState("")
 
     const onSubmitHandler = e => {
@@ -19,7 +19,27 @@ const AddListing = ({ userDetails }) => {
 
         console.log(req);
 
-        axiosWithAuth()
+        // PATCH https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listing/{listingid}
+        // POST  https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listing/create
+
+        if (type === "PATCH") {
+            axiosWithAuth()
+            .patch(`https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listing/${values.listingid}`, req)
+            .then(res => {
+                console.log(res);
+                // window.location.assign("/dashboard/profile")
+                setNewListing({})
+                setMessage("✅ Listing Updated")
+                setTimeout(() => {
+                    setIsEditing(false);
+                }, 1000);
+            })
+            .catch(err => {
+                console.log(err);
+                setMessage("❌ An error has occured")
+            })
+        } else {
+            axiosWithAuth()
             .post(`https://kmcgeeka-airbnboptimal.herokuapp.com/listings/listing/create`, req)
             .then(res => {
                 console.log(res);
@@ -31,6 +51,7 @@ const AddListing = ({ userDetails }) => {
                 console.log(err);
                 setMessage("❌ An error has occured")
             })
+        }
     }
 
     const onChangeHandler = e => {
